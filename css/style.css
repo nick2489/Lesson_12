@@ -1,0 +1,149 @@
+body {
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,237,70,1) 100%);;
+}
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+.header {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 15px;
+	background-color: rgba(76, 201, 197, 0.647);
+	z-index: 100;
+	margin-bottom: 30px;
+}
+
+.block div {
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	margin: 60px;
+	border-radius: 8px;
+} 
+
+.block__translate {
+	background-color: #425F57;
+	
+}
+.block__translate:hover {
+	transform: translate(50px, 50px);
+	
+}
+
+.block__scale {
+	background-color: #AA8B56;
+}
+.block__scale:hover {
+	transform: scale(-1, 1);
+}
+
+.block__rotate {
+	background: #815B5B;
+}
+.block__rotate:hover {
+	transform: rotate(-360deg);
+}
+
+.block__skew {
+	background: #94545B;
+}
+.block__skew:hover {
+	transform: skew(10deg,10deg);
+}
+
+.block__transform-origin {
+	background: #E3C770;
+	transform-origin: 0 0;
+	transform: rotate(0deg);
+}
+.block__transform-origin:hover {
+	transform: rotate(-30deg);
+}
+
+.block__perspective {
+	background: #F3E0B5;
+	perspective-origin: center;
+}
+.block__perspective:hover {
+	transform: perspective(400px) rotateX(50deg);
+	background: #425F57;
+}
+
+.block__translate3d{
+	background: #9caaa39f;
+	transform: translate3d(0px, 0px, 0px);
+}
+.block__translate3d:hover {
+	background: #5fc08f;
+	transform: translate3d(20px, 20px, -20px);
+}
+
+.block__rotate3d {
+	transform: rotate3d(1,1,1, 0deg);
+	background: #815B5B;
+}
+.block__rotate3d:hover {
+	transform: rotate3d(1,1,1, 45deg);
+	background: #ec9191e1;
+}
+
+.block-transform div {
+	text-transform: uppercase;
+	transition: all 0.5s ease 0s;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	margin: 60px;
+	perspective: 400px;
+	transform-style: preserve-3d;
+	background: #665A48;
+	border-radius: 8px;
+	
+}
+.block-transform__style3d:hover {
+	transform: rotateX(45deg);
+}
+.block-flip {
+	display: inline-block;
+	padding-left: 60px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.block-flip__wrapper {
+	width: 150px;
+	height: 150px;
+	transition: all 0.5s ease 0s;
+	position: relative;
+	transform-style: preserve-3d;
+}
+.flip__front,
+.flip__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 8px;
+
+}
+.flip__front {
+	z-index: 2;
+	background: #AA8B56;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+}
+.flip__back {
+	background: #3fb511e0;
+	transform: rotateY(-180deg);
+}
+.block-flip:hover .block-flip__wrapper {
+	transform: rotateY(-180deg);
+}
